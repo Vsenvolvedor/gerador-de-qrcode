@@ -1,0 +1,26 @@
+{
+  "name": "qrcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viteydev/gerador-de-qrcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viteydev/gerador-de-qrcode/issues"
+  },
+  "homepage": "https://github.com/viteydev/gerador-de-qrcode#readme",
+  "dependencies": {
+    "qrcode": "^1.5.0"
+  },
+  "devDependencies": {
+    "electron": "^18.1.0"
+  }
+}
