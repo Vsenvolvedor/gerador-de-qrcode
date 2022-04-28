@@ -32,10 +32,9 @@ const createWindow = () => {
     }
 
     if(win.frameName === `save`) {
-      dialog.showOpenDialog({ properties: ['openDirectory'] }).then(({filePaths:path}) => {
+      dialog.showOpenDialog({ properties: ['openDirectory'] }).then(({ filePaths:path }) => {
         QRCode.toFile(`${path[0]}/${data}.jpeg`,data, options)
       })
-      return {action: 'deny'}
     }
     return {action: 'deny'}
   })
