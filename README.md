@@ -1,4 +1,4 @@
-<h1 align='center'>Gerenciador de gastos </h1>
+<h1 align='center'>Gerador de QRCode </h1>
 <h3 align='center'>
   <a href="#tecnologias">Tecnologias</a> |
   <a href="#sobre">Sobre</a> |
