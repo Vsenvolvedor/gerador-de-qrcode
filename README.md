@@ -16,7 +16,7 @@ Para a construção do projeto utilizei as seguintes tecnologias:
     <li><a href='https://www.npmjs.com/package/qrcode' target='_blank'>qrcode</a></li>
   </ul>
 
-<img align='center' src='./github/img.PNG'/>
+<img align='center' src='./github/gif.gif'/>
 <hr/>
 
 # Sobre
