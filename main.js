@@ -6,7 +6,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 600,
     height: 600,
-    icon: './app/assets/img/qr-icon.png',
+    icon: './qr-icon.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
