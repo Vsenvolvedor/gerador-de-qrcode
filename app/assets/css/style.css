@@ -47,6 +47,15 @@ input:focus {
   border-color: rgb(56, 56, 56);
 }
 
+input + span {
+  display: block;
+  color: rgb(211, 32, 32);
+  font-weight: bold;
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 5px;
+}
+
 button {
   display: block;
   background-color: rgb(236, 191, 65);
@@ -78,3 +87,4 @@ button:focus {
   border: 2px solid rgb(236, 191, 65);
   border-radius: 2px;
 }
+

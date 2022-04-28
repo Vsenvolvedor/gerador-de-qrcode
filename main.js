@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, dialog, webContents} = require('electron')
+const { app, BrowserWindow, Menu, dialog} = require('electron')
 const QRCode = require('qrcode')
 
 const createWindow = () => {
@@ -22,8 +22,9 @@ const createWindow = () => {
     const [url, data] = win.url.split('save=')
     const options = {
       type: 'image/jpeg',
-      quality: 0.3,
-      margin: 1,
+      quality: 1,
+      width: 240,
+      margin: .8,
       color: {
         dark:"#000",
         light:"#fff"
@@ -39,7 +40,7 @@ const createWindow = () => {
     return {action: 'deny'}
   })
 
-  Menu.setApplicationMenu(null)
+  // Menu.setApplicationMenu(null)
 }
 
 // This method will be called when Electron has finished
