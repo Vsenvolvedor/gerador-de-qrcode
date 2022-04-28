@@ -7,6 +7,74 @@
   background: none;
   box-sizing: border-box;
   font-family: Courier, monospace;
-  font-weight: bold;
   color: rgb(15, 15, 15);
+}
+
+body {
+  background-color: #eee;
+}
+
+.container {
+  background-color: rgb(0, 201, 228);
+  padding: 15px;
+  margin: 60px auto;
+  border-radius: 4px;
+  width: 80%;
+  overflow-x: hidden;
+}
+
+label {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  background-color: #ddd;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  margin: 10px auto;
+  width: 80%;
+}
+
+input:hover,
+input:focus {
+  border-color: rgb(56, 56, 56);
+}
+
+button {
+  display: block;
+  background-color: rgb(236, 191, 65);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 2px solid rgb(236, 191, 65);
+  border-radius: 2px;
+  width: 60%;
+  margin: 0 auto 10px auto;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: rgba(236, 190, 65, 0.973);
+  border-color: rgb(56, 56, 56);
+  color: rgb(56, 56, 56);
+}
+
+.img {
+  display: block;
+  background: #eee;
+  margin: 15px auto;
+  width: 240px;
+  height: 200px;
+  border: 2px solid rgb(236, 191, 65);
+  border-radius: 2px;
 }

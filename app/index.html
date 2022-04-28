@@ -6,23 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerador de QrCode</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body>
   <div class="container">
     <section>
-      <form>
-        <label for="text">Adicione aqui</label>
-        <input type="text" name="text" id="text" />
-        <button>Gerar</button>
-      </form>
+      <label for="text">Crie seu QRCode</label>
+      <input type="text" name="text" id="text" placeholder="Escreva aqui" />
+      <button id="gerar">Gerar</button>
       <button>Salvar Imagem</button>
     </section>
-    <section>
-        <div>
-          Imagem
-        </div>
+    <section class="wrap-img">
+        <img class="img" src="">
     </section>
   </div>
-  <script src="./assets/js/renderer.js"></script>
+  <script src="./assets/js/script.js" type="module"></script>
 </body>
 </html>

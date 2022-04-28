@@ -1,8 +1,4 @@
-// main.js
-
-// Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require('electron')
-const path = require('path')
 
 const createWindow = () => {
   // Create the browser window.
@@ -11,8 +7,10 @@ const createWindow = () => {
     height: 600,
     icon: './app/assets/img/qr-icon.png',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: true,
+      contextIsolation: false
     }
+
   })
 
   mainWindow.title = 'Gerador de QrCode'
@@ -25,6 +23,7 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
+
   createWindow()
 
   app.on('activate', () => {
