@@ -1,4 +1,5 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu, dialog, webContents} = require('electron')
+const QRCode = require('qrcode')
 
 const createWindow = () => {
   // Create the browser window.
@@ -13,10 +14,32 @@ const createWindow = () => {
 
   })
 
+ 
   mainWindow.title = 'Gerador de QrCode'
   mainWindow.loadFile('./app/index.html')
 
-  // Menu.setApplicationMenu(null)
+  mainWindow.webContents.setWindowOpenHandler((win) => {
+    const [url, data] = win.url.split('save=')
+    const options = {
+      type: 'image/jpeg',
+      quality: 0.3,
+      margin: 1,
+      color: {
+        dark:"#000",
+        light:"#fff"
+      }
+    }
+
+    if(win.frameName === `save`) {
+      dialog.showOpenDialog({ properties: ['openDirectory'] }).then(({filePaths:path}) => {
+        QRCode.toFile(`${path[0]}/${data}.jpeg`,data, options)
+      })
+      return {action: 'deny'}
+    }
+    return {action: 'deny'}
+  })
+
+  Menu.setApplicationMenu(null)
 }
 
 // This method will be called when Electron has finished
@@ -25,7 +48,7 @@ const createWindow = () => {
 app.whenReady().then(() => {
 
   createWindow()
-
+  
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
